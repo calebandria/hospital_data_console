@@ -19,14 +19,13 @@ public class Admin extends Person {
 	
 	public Admin(String firstname, String lastname){
 		super(firstname, lastname);
-		this.code = generateRandomString(8);
 	}
+	
 	public void setCode(String code) {
 		this.code = code;
 	}
 		
 	public String getCode() {
 		return code;
-	
 	}
 }

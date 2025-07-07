@@ -4,9 +4,12 @@ import com.example.system.*;
 
 public class Main {
 	public static void main(String[] args) {
-		Hospital csbAmbato = new Hospital();
+		Hospital csbAmbato = new Hospital("admin", "john");
 		
-		csbAmbato.adminAuthenticate("admin");
+		String codeAdmin = csbAmbato.initializeAdminCode();
+		csbAmbato.registerAdminInfo();
+		csbAmbato.adminAuthenticate("admin", codeAdmin);
+		
 	}	
 }
 
